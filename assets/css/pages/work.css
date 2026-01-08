@@ -1,0 +1,43 @@
+/* ================================
+   Work Page Only
+   ================================ */
+
+.work-intro {
+  margin-bottom: var(--space-lg);
+}
+
+.work-intro p {
+  max-width: 640px;
+}
+/* ================================
+   Project Detail Page
+   ================================ */
+
+.project-header {
+  margin-bottom: var(--space-lg);
+}
+
+.project-summary {
+  max-width: 720px;
+}
+
+.project-hero {
+  margin-bottom: var(--space-lg);
+}
+
+.project-hero img {
+  border-radius: 8px;
+}
+
+.project-content h2 {
+  margin-top: var(--space-lg);
+}
+
+.project-back {
+  margin-top: var(--space-xl);
+}
+
+.project-back a {
+  font-size: 14px;
+  text-decoration: underline;
+}

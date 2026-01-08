@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daycare Data Engineering</title>
+
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages/work.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="site-nav">
+        <a href="/" class="site-logo">Sunil Kafle</a>
+        <div class="nav-links">
+          <a href="/pages/work/">Work</a>
+          <a href="/pages/about/">About</a>
+          <a href="/pages/contact/">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Project Header -->
+    <section class="project-header">
+      <h1>Daycare Data Engineering & Analytics Pipeline</h1>
+      <p class="project-summary">
+End-to-end data engineering pipeline using synthetic data, SQL analytics, and operational dashboards      </p>
+    </section>
+
+    <!-- Project Hero Image -->
+    <section class="project-hero">
+      <img src="/assets/images/work/data-engineering/cost_report.jpg" alt="Project main visual">
+    </section>
+
+<!-- Project Content -->
+<section class="project-content">
+
+  <h1>Daycare Data Engineering & Analytics Pipeline</h1>
+  <p class="project-subtitle">
+    End-to-end data engineering pipeline using synthetic data, SQL analytics, and operational dashboards
+  </p>
+
+  <h2>Overview</h2>
+  <p>
+    This project designs and implements a full data engineering pipeline for a daycare center to support
+    operational, financial, and educational decision-making. Due to privacy constraints, fully synthetic
+    data was generated to simulate real-world daycare operations. The solution integrates structured data
+    modeling, data quality enforcement, ETL pipelines, analytical SQL queries, and interactive dashboards.
+  </p>
+
+  <h2>Problem & Business Questions</h2>
+  <ul>
+    <li>How many meals are required by age group and dietary preference?</li>
+    <li>What is parent churn and current contract status?</li>
+    <li>What is the total staff salary cost by month and year?</li>
+    <li>How much is spent on supplies by category?</li>
+    <li>Which suppliers offer the lowest cost for books?</li>
+  </ul>
+
+  <h2>Data Model & Architecture</h2>
+  <p>
+    A star schema was designed to support analytical querying while maintaining data integrity.
+    The model includes fact and dimension tables aligned with the identified business questions.
+  </p>
+  <ul>
+    <li>Star schema driven by operational and financial use cases</li>
+    <li>Fact and dimension tables with enforced relationships</li>
+    <li>Constraints validated during ingestion</li>
+  </ul>
+
+  <h2>Data Engineering Approach</h2>
+
+  <h3>Synthetic Data Generation</h3>
+  <ul>
+    <li>Privacy-safe data generation using Faker</li>
+    <li>Controlled distributions to mirror real daycare operations</li>
+    <li>Constraint-aware synthetic datasets</li>
+  </ul>
+
+  <h3>Data Quality & Validation</h3>
+  <ul>
+    <li>Checks for NULL values, data types, and uniqueness</li>
+    <li>Automated logging of invalid records</li>
+    <li>Clean outputs isolated from raw inputs</li>
+  </ul>
+
+  <h3>ETL Pipeline</h3>
+  <ul>
+    <li>Modular extract, validate, transform, and load workflow</li>
+    <li>Pandas-based ingestion and transformation</li>
+    <li>SQLite used as the analytical warehouse</li>
+  </ul>
+
+  <h2>Analytics & SQL</h2>
+  <p>
+    SQL queries were written to directly answer the defined business questions using joins,
+    aggregations, and common table expressions (CTEs). Outputs include churn analysis,
+    cost breakdowns, and supplier comparisons.
+  </p>
+
+  <h2>Dashboards & Insights</h2>
+  <ul>
+    <li>Course Report supporting educators and parents in monitoring learning outcomes</li>
+    <li>Customer Report providing visibility into contracts, revenue, and location</li>
+    <li>Monthly Cost Report tracking staff salaries and supply expenditures</li>
+  </ul>
+
+  <h2>Tools & Stack</h2>
+  <ul>
+    <li>Python, Pandas, Faker</li>
+    <li>SQLite, SQL</li>
+    <li>Data quality validation frameworks</li>
+    <li>Looker Studio</li>
+    <li>GitHub</li>
+  </ul>
+
+  <h2>Collaboration</h2>
+  <p>
+    This was a group project completed as part of an Omdena collaboration with six contributors.
+    My contributions focused on data modeling, ETL development, SQL analytics, and data quality checks.
+  </p>
+
+  <h2>Links</h2>
+  <ul>
+    <li><a href="#" target="_blank">GitHub Repository</a></li>
+    <li><a href="#" target="_blank">Dashboard</a></li>
+    <li><a href="#" target="_blank">Full Technical Report</a></li>
+  </ul>
+
+</section>
+
+
+    <!-- Back Link -->
+    <section class="project-back">
+      <a href="/pages/work/">← Back to Work</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Sunil Kafle. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

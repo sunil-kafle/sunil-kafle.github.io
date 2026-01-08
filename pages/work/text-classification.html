@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CFPB Complaint Classification</title>
+
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages/work.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="site-nav">
+        <a href="/" class="site-logo">Sunil Kafle</a>
+        <div class="nav-links">
+          <a href="/pages/work/">Work</a>
+          <a href="/pages/about/">About</a>
+          <a href="/pages/contact/">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Project Header -->
+    <section class="project-header">
+      <h1>CFPB Consumer Complaint Classification (NLP + Machine Learning)</h1>
+      <p class="project-summary">
+        Multi-class text classification of more than 1 million U.S.
+        consumer financial complaints using TF-IDF and five machine learning models.
+        This project includes full EDA, preprocessing, feature engineering, model tuning, 
+        and performance comparison
+      </p>
+    </section>
+
+    <!-- Project Hero Image -->
+    <section class="project-hero">
+      <img src="/assets/images/work/text-classification/header.png" alt="Project main visual">
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+
+      <h2>Overview</h2>
+      <p>
+   <p>
+    The Consumer Financial Protection Bureau (CFPB) maintains a large public database of 
+    consumer complaints filed against financial institutions in the United States. 
+    These complaints contain text descriptions that signal customer frustration, product issues,
+    and service failures.
+  </p>
+
+<p>
+  This project focuses on complaints related to <strong>JPMorgan Chase &amp; Co.</strong>, 
+  one of the largest U.S. financial institutions. The goal is to build
+   a <strong>multi-class text classifier</strong> that automatically assigns 
+   each complaint to its correct <strong>product category</strong>, enabling:
+</p>
+
+<ul>
+  <li>faster triaging of customer issues</li>
+  <li>better customer service operations</li>
+  <li>improved feedback loops for product improvement</li>
+  <li>automated analysis of high-volume complaint logs</li>
+</ul>
+
+<p>
+  The final classifier compares five supervised ML algorithms and identifies the most
+  effective model based on ROC_AUC, accuracy, and F1-scores.
+</p>
+
+      </p>
+
+<h2>Approach</h2>
+
+<p>
+  This project follows a structured machine learning workflow, beginning with careful 
+  dataset selection and preparation, followed by systematic text preprocessing to support 
+  robust multi-class classification.
+</p>
+
+<h3>Dataset</h3>
+
+<ul>
+  <li><strong>Source:</strong> CFPB public consumer complaint database (<a href="https://www.consumerfinance.gov/data-research/consumer-complaints/" target="_blank">link</a>)</li>
+  <li><strong>Original size:</strong> 1,048,575 complaints with 18 features</li>
+  <li><strong>Filtered sample:</strong> Complaints filed against <strong>JPMorgan Chase &amp; Co.</strong></li>
+  <li><strong>Target variable:</strong> Product category (multi-class classification)</li>
+  <li><strong>Text field:</strong> Consumer complaint narrative</li>
+</ul>
+
+<p>
+  The dataset captures a wide range of customer issues, including:
+</p>
+
+<ul>
+  <li>credit cards</li>
+  <li>checking or savings accounts</li>
+  <li>mortgage products</li>
+  <li>credit reporting</li>
+  <li>debt collection</li>
+  <li>money transfers</li>
+  <li>and more</li>
+</ul>
+
+<h3>Workflow Summary</h3>
+
+<h4>Data Cleaning &amp; Preprocessing</h4>
+
+<ul>
+  <li>Lowercasing</li>
+  <li>Punctuation and numeric removal</li>
+  <li>Tokenization</li>
+  <li>Stopword removal</li>
+  <li>Lemmatization</li>
+  <li>TF-IDF vectorization (unigrams and bigrams)</li>
+</ul>
+<h4>Exploratory Data Analysis</h4>
+
+<p>
+  Exploratory data analysis was conducted to understand complaint distribution
+   patterns and identify dominant product categories within JPMorgan Chase &amp; Co. complaints.
+</p>
+
+<p>Key insights include:</p>
+
+<p>  Complaint Volume by Product Type</p>
+
+<p>The largest volumes of complaints originate from the following product categories:</p>
+
+<ul>
+  <li>Credit card or prepaid card</li>
+  <li>Checking or savings account</li>
+  <li>Credit reporting</li>
+  <li>Mortgage</li>
+</ul>
+<p>
+  These categories dominate the complaint landscape.
+</p>
+
+<img 
+  src="/assets/images/work/text-classification/complaint_cases.png" 
+  alt="Complaint volume by product type for JPMorgan Chase consumer complaints"
+  style = "max-width: 100%; height: auto;">
+
+<p>
+  Text Length Distribution
+</p>
+
+<ul>
+  <li>Highly skewed distribution</li>
+  <li>Some complaints exceed 30,000 characters</li>
+  <li>Approximately 75% of complaints fall under 4,000 characters</li>
+</ul>
+
+<img 
+src="/assets/images/work/text-classification/text_length.png" 
+alt="Text length distribution by product category"
+style = "max-width: 100%; height: auto;">
+<p>
+  WordClouds
+</p>
+
+<p>
+  These visualizations help understand key themes and frequent words.
+</p>
+
+<p>
+  <strong>Overall WordCloud:</strong>
+</p>
+<img src="/assets/images/work/text-classification/whole.png" alt="Overall word cloud for all complaints">
+
+<img src="/assets/images/work/text-classification/prepaid-card.png" alt="Word cloud for credit or prepaid card complaints">
+
+<img src="/assets/images/work/text-classification/checking-saving.png" alt="Word cloud for checking or savings account complaints">
+
+
+      <h2>Machine Learning Models Used</h2>
+<p>
+  Five models were trained, evaluated, and compared:
+</p>
+
+<ol>
+  <li>Random Forest</li>
+  <li>Logistic Regression</li>
+  <li>Multinomial Naïve Bayes</li>
+  <li>Linear SVC (Support Vector Classifier)</li>
+  <li>XGBoost Classifier</li>
+</ol>
+
+<p>
+  Each model includes:
+</p>
+
+<ul>
+  <li>Base version</li>
+  <li>Tuned version (GridSearchCV)</li>
+  <li>Evaluation using:
+    <ul>
+      <li>Accuracy</li>
+      <li>ROC_AUC</li>
+      <li>F1-score (macro across 3 classes)</li>
+    </ul>
+  </li>
+</ul>
+
+            <h2>Results</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Accuracy</th>
+      <th>ROC_AUC</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Linear SVC</td>
+      <td>0.83</td>
+      <td>0.95</td>
+      <td>Best overall</td>
+    </tr>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>0.82</td>
+      <td>0.95</td>
+      <td>Very strong performer</td>
+    </tr>
+    <tr>
+      <td>Random Forest</td>
+      <td>0.78</td>
+      <td>0.92</td>
+      <td>Good baseline</td>
+    </tr>
+    <tr>
+      <td>XGBoost</td>
+      <td>0.80</td>
+      <td>0.94</td>
+      <td>Competitive</td>
+    </tr>
+    <tr>
+      <td>Naïve Bayes</td>
+      <td>0.71</td>
+      <td>0.93</td>
+      <td>Fastest but least accurate</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <strong>Key Findings</strong>
+</p>
+
+<ul>
+  <li>Linear SVC and Logistic Regression performed best across most metrics.</li>
+  <li>Classical ML methods using TF-IDF still outperform more complex boosting models for sparse text classification tasks.</li>
+  <li>Hyperparameter tuning did not significantly improve results for the top models.</li>
+  <li>F1-scores across all classes were well-balanced for Logistic Regression and Linear SVC.</li>
+</ul>
+
+
+      <h2>Conclusion</h2>
+<p>
+  This project demonstrates that consumer financial complaints can be effectively classified using 
+  traditional machine learning models. Logistic Regression and Linear SVC both achieved strong
+   performance, with ROC_AUC approximately 0.95 and accuracy in the range of 0.82–0.83.
+</p>
+
+<p> These results show that:</p>
+
+<ul>
+  <li>TF-IDF provides strong, interpretable features</li>
+  <li>Classical models remain competitive for real-world NLP tasks</li>
+  <li>Complaint classification can significantly support customer service operations and quality monitoring</li>
+</ul>
+
+<p>This project reflects a complete machine learning workflow covering:</p>
+
+<ul>
+  <li>Large-scale text data preparation</li>
+  <li>Exploratory analysis</li>
+  <li>Multiple machine learning models</li>
+  <li>Model selection and interpretation</li>
+</ul>
+
+      <h2>Future Work</h2>
+
+ <p>Potential next steps include:</p>
+
+<ul>
+  <li>Fine-tuning transformer models (BERT, RoBERTa)</li>
+  <li>SMOTE or class balancing methods</li>
+  <li>Deployment with Streamlit or FastAPI</li>
+  <li>LDA topic modeling for unsupervised insights</li>
+  <li>Explainability modules (LIME, SHAP)</li>
+</ul>
+
+            <h2>Tools & Technologies</h2>
+      <p>
+        Python, SQL, Tableau, APIs, GitHub Pages, etc.
+      </p>
+
+    </section>
+
+    <!-- Back Link -->
+    <section class="project-back">
+      <a href="/pages/work/">← Back to Work</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Sunil Kafle. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
