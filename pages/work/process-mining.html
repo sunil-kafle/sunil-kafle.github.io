@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sepsis</title>
+
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages/work.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="site-nav">
+        <a href="/" class="site-logo">Sunil Kafle</a>
+        <div class="nav-links">
+          <a href="/pages/work/">Work</a>
+          <a href="/pages/about/">About</a>
+          <a href="/pages/contact/">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+<!-- Project Header -->
+<section class="project-header">
+  <h1>Sepsis Process-Mining</h1>
+  <p class="project-summary">
+    This project applies process mining techniques to real hospital event log data to analyze sepsis patient pathways, measure cycle times, and identify delays in clinical workflows that may impact patient outcomes.
+  </p>
+</section>
+
+<!-- Project Hero Image -->
+<section class="project-hero">
+  <img src="/assets/images/work/process-mining/sepsis_process_map.png" alt="Sepsis process mining workflow visualization">
+</section>
+
+<!-- Project Content -->
+<section class="project-content">
+
+  <h2>Overview</h2>
+  <p>
+    Sepsis is a time-critical medical condition where delays in diagnosis and treatment can significantly affect 
+    patient outcomes. Hospitals generate detailed event logs capturing clinical activities, lab tests, and
+     decision points throughout a patient’s care journey. This project analyzes a real hospital sepsis event 
+     log to better understand patient flow, treatment timelines, and operational bottlenecks in emergency care pathways.
+  </p>
+
+  <h2>Approach</h2>
+  <p>
+    The project uses process mining techniques to analyze an event log published by Eindhoven University 
+    of Technology (TU/e). The data were loaded and parsed using PM4Py, then converted into a pandas DataFrame 
+    for analysis. Events were sorted by patient case and timestamp to reconstruct patient journeys. Cycle time
+     metrics were computed at both case and activity levels, and process maps were generated to visualize care
+      pathways and identify delays across clinical activities and lab results.
+  </p>
+
+  <h2>Results</h2>
+  <p>
+    The analysis revealed significant variation in patient cycle times, highlighting potential 
+    delays in diagnostic testing and clinical decision points. Process maps and performance metrics
+     helped identify bottlenecks in the workflow, particularly around lab result availability and 
+     treatment transitions. These insights demonstrate how process mining can support operational 
+     improvement in healthcare settings by making complex clinical workflows transparent and measurable.
+  </p>
+<h2>Tools & Technologies</h2>
+<ul>
+  <li>Python (data processing and analysis)</li>
+  <li>PM4Py for process discovery and performance analysis</li>
+  <li>Pandas for event log transformation</li>
+  <li>XES event log format</li>
+  <li>Process mining and cycle time analysis</li>
+  <li>VS Code</li>
+  <li>Git version control</li>
+</ul>
+
+
+</section>
+
+
+    <!-- Back Link -->
+    <section class="project-back">
+      <a href="/pages/work/">← Back to Work</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Sunil Kafle. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
