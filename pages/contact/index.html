@@ -1,1 +1,77 @@
-<!DOCTYPE html><html><head><title>Contact</title></head><body>Contact</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Sunil Kafle</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Base styles -->
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/contact.css">
+
+  <!-- Page-specific -->
+  <link rel="stylesheet" href="/assets/css/pages/contact.css">
+
+  <!-- Font Awesome for LinkedIn icon -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="site-nav">
+        <a href="/" class="site-logo">Sunil Kafle</a>
+        <div class="nav-links">
+          <a href="/pages/work/">Work</a>
+          <a href="/pages/about/">About</a>
+          <a href="/pages/contact/">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container">
+    <section class="contact">
+      <h1>Contact</h1>
+
+      <p>
+        Thank you for taking the time to visit my work and connect. I’m always open to
+        thoughtful conversations, collaboration opportunities, and professional exchanges.
+      </p>
+
+      <p>
+        The best way to reach me is through LinkedIn:
+      </p>
+
+      <p class="contact-link">
+        <a href="https://www.linkedin.com/in/yourusername" target="_blank">
+          <i class="fab fa-linkedin"></i>
+          Connect on LinkedIn
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Sunil Kafle</p>
+    </div>
+  </footer>
+
+  <!-- Small utility script -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

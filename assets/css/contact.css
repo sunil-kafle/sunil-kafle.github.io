@@ -1,0 +1,21 @@
+.contact {
+  max-width: 60ch;
+}
+
+.contact-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #0a66c2;
+  text-decoration: underline;
+}
+
+.contact-link a:hover {
+  color: #084a94;
+}
+
+.contact-link i {
+  font-size: 20px;
+}
