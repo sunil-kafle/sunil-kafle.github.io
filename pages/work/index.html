@@ -4,14 +4,20 @@
   <meta charset="UTF-8">
   <title>Work</title>
 
+  <!-- Global styles -->
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="stylesheet" href="/assets/css/components.css">
-  <link rel="stylesheet" href="/assets/css/pages/work.css">
+
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="/assets/css/work.css">
 </head>
+
 <body>
 
-  <!-- Header -->
+  <!-- =========================
+       Site Header / Navigation
+       ========================= -->
   <header>
     <div class="container">
       <nav class="site-nav">
@@ -25,6 +31,9 @@
     </div>
   </header>
 
+  <!-- =========================
+       Main Content
+       ========================= -->
   <main class="container">
 
     <!-- Page Intro -->
@@ -35,183 +44,139 @@
       </p>
     </section>
 
-    <!-- Work Grid -->
+    <!-- =========================
+         Project Grid
+         ========================= -->
     <section class="work-list">
       <div class="work-preview-grid">
-<!-- project 1 -->
+
+        <!-- Project 1 -->
         <article class="work-card">
-        <a href="/pages/work/text-classification.html">
+          <a href="/pages/work/text-classification.html">
             <img src="/assets/images/work/text-classification/text_length.png"
-                alt="Text classification preview">
-
+                 alt="Text classification preview">
             <h3>Text Classification</h3>
-
             <p class="project-stack">
-            <strong>Stack:</strong> Python, NLP, XGBoost, Random Forest, SVM
+              <strong>Stack:</strong> Python, NLP, XGBoost, Random Forest, SVM
             </p>
-
             <p>
-            Developed a multi-class text classification system to analyze large-scale U.S. 
-            consumer complaints using supervised NLP models.
-            </p> 
-        
-        </a>
+              Developed a multi-class text classification system to analyze large-scale U.S.
+              consumer complaints using supervised NLP models.
+            </p>
+          </a>
         </article>
-<!-- project 2-->
-                <article class="work-card">
-        <a href="/pages/work/data-engineering.html">
-            <img src="/assets/images/work/data-engineering/cost_report.jpg" alt="Data Engineering Project">
-                
+
+        <!-- Project 2 -->
+        <article class="work-card">
+          <a href="/pages/work/data-engineering.html">
+            <img src="/assets/images/work/data-engineering/cost_report.jpg"
+                 alt="Data engineering project">
             <h3>Data Engineering</h3>
-
             <p class="project-stack">
-            <strong>Stack:</strong> Python, SQL, Relational Data Modeling, ETL & Reporting Pipelines
+              <strong>Stack:</strong> Python, SQL, Relational Data Modeling, ETL
             </p>
-
             <p>
-              Designed relational schemas and automated ETL workflows using Python and SQL.
-              Built dashboards and summary reports to support cost analysis and operational decision-making.
-            </p> 
-        
-        </a>
+              Designed relational schemas and automated ETL workflows to support
+              reporting and operational decision-making.
+            </p>
+          </a>
         </article>
-<!-- project 3 -->
-                </article>
-                <article class="work-card">
-        <a href="/pages/work/sales-analytics.html">
-            <img src="/assets/images/work/tableau-project/map.jpg" alt="Tableau Project">
-                
+
+        <!-- Project 3 -->
+        <article class="work-card">
+          <a href="/pages/work/sales-analytics.html">
+            <img src="/assets/images/work/tableau-project/map.jpg"
+                 alt="State-level sales analysis">
             <h3>State-Level Sales Analysis Using Tableau</h3>
-
             <p class="project-stack">
-            <strong>Stack:</strong> Tableau, Parameters, Calculated Fields, Dashboard & Storyboard
+              <strong>Stack:</strong> Tableau, Calculated Fields, Dashboards
             </p>
-
             <p>
-Built an interactive Tableau dashboard to compare regional and state-level sales performance across the U.S., highlighting trends, profitability,
-and geographic concentration for planning and analysis.
-            </p> 
-        
-        </a>
+              Built an interactive dashboard to compare regional and state-level
+              sales performance across the U.S.
+            </p>
+          </a>
         </article>
-<!-- project 4 -->
-                </article>
-                <article class="work-card">
-        <a href="/pages/work/airport-delay.html">
-            <img src="/assets/images/work/tableau-project/airline-card.png" alt="Airline Project">
-                
+
+        <!-- Project 4 -->
+        <article class="work-card">
+          <a href="/pages/work/airport-delay.html">
+            <img src="/assets/images/work/tableau-project/airline-card.png"
+                 alt="Airport delay scorecard">
             <h3>U.S. Airport Delay Performance Scorecard</h3>
-
             <p class="project-stack">
-            <strong>Stack:</strong> Tableau, Calculated Fields, Time-Series Analysis, Performance Benchmarking
+              <strong>Stack:</strong> Tableau, Time-Series Analysis
             </p>
-
             <p>
-Built an interactive Tableau scorecard to track airport and airline delay performance over time, 
-enabling operational monitoring and comparative analysis.
-            </p> 
-        
-        </a>
-        </article>
-
-<!-- project 5 -->
-                </article>
-                <article class="work-card">
-        <a href="/pages/work/customer-demographics.html">
-            <img src="/assets/images/work/tableau-project/bank-customers.png" alt="Customer Segmentation Project">
-                
-            <h3>Bank Customers Demographics Analysis</h3>
-
-            <p class="project-stack">
-            <strong>Stack:</strong> Tableau, Calculated Fields, Parameters
+              Developed a scorecard to track airline and airport delay performance
+              for operational benchmarking.
             </p>
-
-            <p>
-Built an interactive Tableau dashboard to analyze bank customer demographics, 
-balance distribution, and regional patterns to find customer segmentation.
-            </p> 
-        
-        </a>
+          </a>
         </article>
-<!-- project 6 -->
-                        </article>
-                <article class="work-card">
-        <a href="/pages/work/process-mining.html">
-            <img src="/assets/images/work/process-mining/sepsis_frequency_map.png" alt="Data Engineering Project">
-                
-            <h3>Sepsis Process-Mining(Healthcare Event Log)</h3>
 
+        <!-- Project 5 -->
+        <article class="work-card">
+          <a href="/pages/work/customer-demographics.html">
+            <img src="/assets/images/work/tableau-project/bank-customers.png"
+                 alt="Customer demographics analysis">
+            <h3>Bank Customer Demographics Analysis</h3>
             <p class="project-stack">
-            <strong>Stack:</strong> Python, PM4Py, Pandas, Process Mining
-
+              <strong>Stack:</strong> Tableau, Parameters
+            </p>
             <p>
-Applied process mining to real hospital sepsis event logs to analyze patient flow, 
-    quantify cycle times, and identify bottlenecks in emergency care pathways.
-            </p> 
-        
-        </a>
+              Analyzed customer demographics, balance distribution, and regional
+              patterns for segmentation insights.
+            </p>
+          </a>
         </article>
- <!-- project-template start-->
-                <!-- </article>
-                <article class="work-card">
-        <a href="/pages/work/data-engineering.html">
-            <img src="/assets/images/work/data-engineering/cost_report.jpg" alt="Data Engineering Project">
-                
-            <h3>Project Title</h3>
 
+        <!-- Project 6 -->
+        <article class="work-card">
+          <a href="/pages/work/process-mining.html">
+            <img src="/assets/images/work/process-mining/sepsis_frequency_map.png"
+                 alt="Sepsis process mining">
+            <h3>Sepsis Process Mining (Healthcare Event Log)</h3>
             <p class="project-stack">
-            <strong>Stack:</strong> Python,
-
+              <strong>Stack:</strong> Python, PM4Py, Pandas
+            </p>
             <p>
-              Designed relational schemas and automated ETL workflows using Python and SQL.
-              Built dashboards and summary reports to support cost analysis and operational decision-making.
-            </p> 
-        
-        </a>
-        </article> -->
-
- <!-- project template end -->
-  <section class="work-external">
-  <h2>Additional Tableau Visualizations</h2>
-  <p>
-    A curated selection of exploratory dashboards published on Tableau Public,
-    showcasing a range of business, geographic, and performance analytics.
-  </p>
-
-  <ul class="external-projects">
-    <li>
-      <a href="https://public.tableau.com/your-link" target="_blank">
-        Airport Delay Performance Scorecard
-      </a>
-      – Operational benchmarking across U.S. airports and airlines
-    </li>
-    <li>
-      <a href="https://public.tableau.com/your-link" target="_blank">
-        Startup Growth & Revenue Quadrant
-      </a>
-      – Growth benchmarking using revenue and expense thresholds
-    </li>
-    <li>
-      <a href="https://public.tableau.com/your-link" target="_blank">
-        State-Level Sales Distribution
-      </a>
-      – Geographic analysis of sales performance across U.S. states
-    </li>
-    <li>
-      <a href="https://public.tableau.com/your-link" target="_blank">
-        Long-Term Unemployment Trends
-      </a>
-      – Time-series analysis of unemployment dynamics
-    </li>
-  </ul>
-</section>
+              Applied process mining techniques to hospital event logs to analyze
+              patient flow and identify bottlenecks in care pathways.
+            </p>
+          </a>
+        </article>
 
       </div>
     </section>
 
+    <!-- =========================
+         Additional Tableau Work
+         ========================= -->
+<section class="work-external">
+  <header class="work-external-header">
+    <h2 class="work-external-title">
+      Additional Tableau Visualizations
+    </h2>
+    <p class="work-external-desc">
+      Exploratory dashboards published on Tableau Public, covering geographic, operational, and performance analytics.
+    </p>
+  </header>
+
+  <a class="work-external-cta"
+     href="https://public.tableau.com/app/profile/sunil.kafle/vizzes"
+     target="_blank"
+     rel="noopener noreferrer">
+    View all Tableau dashboards
+    <span class="arrow">→</span>
+  </a>
+</section>
+
+
   </main>
- 
-  <!-- Footer -->
+
+  <!-- =========================
+       Site Footer
+       ========================= -->
   <footer>
     <div class="container">
       <p>© 2026 Sunil Kafle</p>
