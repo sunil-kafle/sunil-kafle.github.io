@@ -97,18 +97,6 @@
   margin-bottom: 0.35rem;
 }
 
-/* Description: truncate to one line */
-.work-external-desc {
-  font-size: var(--fs-base);
-  color: var(--text-muted);
-  max-width: 72ch;
-
-  display: -webkit-box;
-  -webkit-line-clamp: 1;      /* truncate to one line */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
 /* CTA: clearly actionable, not button-like */
 .work-external-cta {
   display: inline-block;
