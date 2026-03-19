@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seasonal NDVI Monitoring | Climate-Smart Agriculture</title>
+
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/work.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="site-nav">
+        <a href="/" class="site-logo">Sunil Kafle</a>
+        <div class="nav-links">
+          <a href="/pages/work/">Work</a>
+          <a href="/pages/about/">About</a>
+          <a href="/pages/contact/">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Project Header -->
+    <section class="project-header">
+      <h1>Climate-Smart Agriculture: Seasonal NDVI Monitoring</h1>
+      <p class="project-summary">
+        A multi-year vegetation monitoring project using Sentinel-2 imagery,
+        Google Earth Engine, and Python-based geospatial analysis to track
+        seasonal NDVI patterns in Tippecanoe County, Indiana (2018–2024).
+      </p>
+    </section>
+
+    <!-- Project Hero Image -->
+    <section class="project-hero">
+      <img src="/assets/images/work/gis-project/season-ndvi-grid.png"
+           alt="Seasonal NDVI Grid Visualization">
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+
+      <h2>Overview</h2>
+      <p>
+        This project analyzes how vegetation conditions changed across growing
+        seasons in Tippecanoe County, Indiana using Sentinel-2 surface reflectance
+        imagery. Each year is summarized using the same seasonal window
+        (May 1 – September 30) to enable consistent year-to-year comparison.
+      </p>
+      <p>
+        Rather than relying on a single visual map, the workflow generates
+        structured raster and tabular outputs that allow for systematic
+        comparison of seasonal vegetation strength across multiple years.
+      </p>
+
+      <h2>Approach</h2>
+      <p>
+        The workflow begins in Google Earth Engine, where Sentinel-2 imagery
+        is filtered by county boundary, season, and cloud conditions.
+        Seasonal median composites are generated and NDVI is calculated
+        from red and near-infrared bands.
+      </p>
+      <p>
+        Exported GeoTIFF rasters are processed locally in Python for
+        summary statistics, classification, and grid-based aggregation.
+        Annual NDVI values are converted into structured CSV datasets
+        to support multi-year comparison and visualization.
+      </p>
+
+      <h2>Key Outputs</h2>
+      <ul>
+        <li>Seasonal NDVI rasters (2018–2024)</li>
+        <li>Vegetation classification maps</li>
+        <li>Grid-level NDVI datasets for each year</li>
+        <li>Multi-year comparison tables and figures</li>
+      </ul>
+
+      <h2>Selected Visualizations</h2>
+
+      <img src="/assets/images/work/gis-project/ndvi_chart.png"
+           alt="NDVI Yearly Comparison Chart">
+
+      <img src="/assets/images/work/gis-project/seasonal-ndvi-change.png"
+           alt="Seasonal NDVI Change Map">
+
+      <img src="/assets/images/work/gis-project/spatial-ndvi-change.png"
+           alt="Spatial NDVI Change Map">
+
+      <h2>Main Findings</h2>
+      <p>
+        The analysis shows clear year-to-year variation in vegetation conditions.
+        2024 recorded the strongest seasonal NDVI levels, while 2021 showed
+        the weakest. The largest negative change occurred between 2020 and 2021,
+        and the decline was spatially widespread rather than localized.
+      </p>
+      <p>
+        The results demonstrate that vegetation conditions fluctuate across
+        seasons rather than following a simple linear trend.
+      </p>
+
+      <h2>Tools & Technologies</h2>
+      <p>
+        Python, Google Earth Engine, Sentinel-2 Surface Reflectance,
+        Raster Processing, Geospatial Analysis, Pandas, Matplotlib
+      </p>
+
+    </section>
+
+    <!-- Back Link -->
+    <section class="project-back">
+      <a href="/pages/work/">← Back to Work</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Sunil Kafle. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
